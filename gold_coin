@@ -1,0 +1,29 @@
+#include <stdio.h>
+//3:00PM~3:20PM 12:24~
+
+int main(void)
+{
+	int n = 1;
+	int userNumber = 0;
+	int date = 1;
+	int aToday = 0, aTotal = 0;
+	int bToday = 0, bTotal = 0;
+	char knight = "A";
+	
+	printf("날짜 N일은 입력하시오: \n");
+	scanf_s("%d", &userNumber, sizeof(userNumber));
+	
+	while(date <= userNumber)
+	{
+		date += 1;
+		
+		if (date == (n * (n + 1) / 2))
+			aToday += 1;
+		aTotal += aToday;
+	}
+	printf("기사 A가 오늘 받는 금화의 개수 : %d \n", aToday);
+	printf("기사 A가 지금까지 받은 금화의 개수 : %d \n", aTotal);
+	//printf("기사 B가 오늘 받는 금화의 개수 : %d \n", bToday);
+	//printf("기사 B가 지금까지 받은 금화의 개수 : %d \n", bTotal);
+	//printf("10일까지는 기사 %s가 더 많이 받았습니다.", knight);
+}
